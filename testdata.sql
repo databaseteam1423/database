@@ -6,15 +6,15 @@ go
 insert into Staff (StaffID, StaffName, Permission, StaffAge, Salary, Staff_Key) values (2, 'js', 1, 23, 8000, '123456')
 go
 
-insert into Account (AID, "Key", Balance) values (2, 'MXS76 4G8IH4UV0T3HAC', 1000)
+insert into Account (AID, "Key", Balance) values (2, '123456', 1000)
 go
 
 
-insert into Account (AID, "Key", Balance) values (1, 'BW4NU6MY5J3TMSI2TXWQ',15000)
+insert into Account (AID, "Key", Balance) values (1, '123456',15000)
 go
 
 
-insert into Account (AID, "Key", Balance) values (0, '058GXGFN7KTBS T 8S2A', 2000)
+insert into Account (AID, "Key", Balance) values (0, '123456', 2000)
 go
 
 insert into buysome (AID, SID, BuyDate, Quantity) values (1, 1, '1-1-1 0:0:1', 200)
