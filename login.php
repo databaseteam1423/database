@@ -22,13 +22,14 @@
       echo "Connection could not be established.\n";
       die( var_dump(sqlsrv_errors()));
   }
+  /*
   $query=sqlsrv_query($conn,"select * from mytest.dbo.J");
   while($row=sqlsrv_fetch_array($query))
   {
       echo $row['JNO'].'<br />';
   }
   sqlsrv_close( $conn);
-  
+  */
 ?>
 </body>
 </html>
