@@ -8,28 +8,33 @@
   $name =$_POST['name'];
   $password =$_POST['password'];
   $type =$_POST['find'];
-  echo $name.'<br />';
-  echo $password.'<br />';
-  echo $type.'<br />';
-  //phpinfo();
-  
   $serverName = "(local)";
   $connectionInfo =  array("UID"=>"sa","PWD"=>"123456","Database"=>"mytest");
   $conn = sqlsrv_connect( $serverName, $connectionInfo);
-  if( $conn ){
-      echo "Connection established.".'<br/>';
-  }else{
-      echo "Connection could not be established.\n";
-      die( var_dump(sqlsrv_errors()));
-  }
-  /*
-  $query=sqlsrv_query($conn,"select * from mytest.dbo.J");
-  while($row=sqlsrv_fetch_array($query))
+  if($type=="user")
   {
-      echo $row['JNO'].'<br />';
+      $querystring="select * from mytest.dbo.Account where AID=$name;";
+      $query=sqlsrv_query($conn,$querystring);
+      $row=sqlsrv_fetch_array($query);
+      if(strcmp(rtrim($row['Key']), $password)==0)
+          echo "Your password is correct!";
+      else 
+          echo "Your password is not correct!";
+          
   }
+
+
+
+  
+  
+
+
+
+
+
+  
   sqlsrv_close( $conn);
-  */
+  
 ?>
 </body>
 </html>
