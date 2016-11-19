@@ -12,28 +12,28 @@
   $connectionInfo =  array("UID"=>"sa","PWD"=>"123456","Database"=>"mytest");
   $conn = sqlsrv_connect( $serverName, $connectionInfo);
   if($type=="user")
+
   {
       $querystring="select * from mytest.dbo.Account where AID=$name;";
       $query=sqlsrv_query($conn,$querystring);
       $row=sqlsrv_fetch_array($query);
       if(strcmp(rtrim($row['Key']), $password)==0)
-          echo "Your password is correct!";
-      else 
-          echo "Your password is not correct!";
+      {
+          printf("dsdsdsfsjfadhuivhffuisdhfi");
+          header("location:stock.html");
+      }
+      else
+      {
+          echo "<script type='text/javascript'>alert('您输入的用户名和密码不正确');history.back();</script>";
+      }
           
   }
 
 
 
   
-  
-
-
-
-
-
-  
   sqlsrv_close( $conn);
+      }
   
 ?>
 </body>

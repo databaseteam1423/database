@@ -2,13 +2,14 @@
 <head><title>login</title></head>
 <body>
 <form action="http://localhost/database/login.php" method="post">
-<table border="0">
+<br>
+<table border="0" align="center">
 <tr bgcolor="#cccccc">
   <td width="150">Item</td>
   <td width="20">Quantity</td>
 </tr>
 <tr>
-  <td>name</td>
+  <td>YourID</td>
   <td align="center"><input type="text" name="name" size="20"
      maxlength="20" /></td>
 </tr>
@@ -29,6 +30,14 @@
   <td colspan="2" align="center"><input type="submit" value="log in" /></td>
 </tr>
 </table>
+
+<?php if($name=="0") alert("233333333ok");?>
+
+
+
+
+
+
 </form>
 </body>
 </html>
