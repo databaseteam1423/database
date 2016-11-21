@@ -18,7 +18,10 @@
     $transfer_row=sqlsrv_fetch_array($query);
     if($transfer_row==null)
     {
-    	echo "your transfer account does not exit!";
+    	
+    	echo "<script type='text/javascript'>alert('your transfer account does not exist!');</script>";
+    	echo '<script>window.location.href = "http://localhost/database/login.php";</script>';
+    	
     }
     else
     {
@@ -27,7 +30,8 @@
     	$row=sqlsrv_fetch_array($query);
     	if($row['Balance']<$transfer_ammount)
     	{
-    		echo "you do not have enough balance!";
+    		echo "<script type='text/javascript'>alert('you do not have enough balance!');</script>";
+    		echo '<script>window.location.href = "http://localhost/database/login.php";</script>';
     	}
     	else
     	{
@@ -39,7 +43,8 @@
     		$querystring="update mytest.dbo.Account set Balance=$up where AID=$name";
     		//var_dump($querystring);
     		$query=sqlsrv_query($conn,$querystring);
+    		echo "<script type='text/javascript'>alert('trasfer succeed!');</script>";
+    		echo '<script>window.location.href = "http://localhost/database/login.php";</script>';
     	}
     }
-    Header("Location:http://localhost/database/login.php");
 	?>

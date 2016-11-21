@@ -48,8 +48,10 @@
         			$query=sqlsrv_query($conn,$querystring);
         			//Header("Location:http://localhost/database/login.php");
         		}
-        		else
-        			echo "your balance is not enough!";
+        		else{
+        			echo "<script type='text/javascript'>alert('you do not have enough balance!');</script>";
+        			echo '<script>window.location.href = "http://localhost/database/login.php";</script>';
+        		}
 	        }
 	        else
 	        {
@@ -68,15 +70,19 @@
         			$querystring="insert into  mytest.dbo.[buysome] (AID,SID,BuyDate,Quantity) values ($name,$SID,null,$quantity)";
         			//var_dump($querystring);
         			$query=sqlsrv_query($conn,$querystring);
-    
+    				echo "<script type='text/javascript'>alert('succeed!');</script>";
+    				echo '<script>window.location.href = "http://localhost/database/login.php";</script>';
         		}
-        		else
-        			echo "your balance is not enough!";
+        		else{
+        			echo "<script type='text/javascript'>alert('you do not have enough balance!');</script>";
+        			echo '<script>window.location.href = "http://localhost/database/login.php";</script>';
+        		}
 	        }
         }
         else
         {
-        	echo "the stock is not available!";
+        	echo "<script type='text/javascript'>alert('the stock is not available!');</script>";
+        	echo '<script>window.location.href = "http://localhost/database/login.php";</script>';
         }
     }
     else  		//sale
@@ -112,16 +118,24 @@
         			//var_dump($querystring);
         			$query=sqlsrv_query($conn,$querystring);
         			//Header("Location:http://localhost/database/login.php");
+        			echo "<script type='text/javascript'>alert('succeed!');</script>";
+        			echo '<script>window.location.href = "http://localhost/database/login.php";</script>';
         		}
-        		else
-        			echo "you haven't buy enough stock!";
+        		else{
+        			echo "<script type='text/javascript'>alert('you do not have enough stock!');</script>";
+        			echo '<script>window.location.href = "http://localhost/database/login.php";</script>';
+        		}
 	        }
-	        else
-	        	echo "you haven't buy this stock!";
+	        else{
+	        	echo "<script type='text/javascript'>alert('you haven't buy this stock!');</script>";
+	        	echo '<script>window.location.href = "http://localhost/database/login.php";</script>';
+	        }
         }
         else
         {
-        	echo "the stock is not available!";
+        	
+        	echo "<script type='text/javascript'>alert('the stock is not available!');</script>";
+        	echo '<script>window.location.href = "http://localhost/database/login.php";</script>';
         }
     }
 
@@ -130,5 +144,5 @@
 
 
     sqlsrv_close( $conn);
-    Header("Location:http://localhost/database/login.php");
+    //Header("Location:http://localhost/database/login.php");
 ?>
