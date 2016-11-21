@@ -8,7 +8,6 @@
   $name=$_SESSION['Account'];
   $password=$_SESSION['password'];
   $type=$_SESSION['type'];
-
   $serverName = "(local)";
   $connectionInfo =  array("UID"=>"sa","PWD"=>"123456","Database"=>"mytest");
   $conn = sqlsrv_connect( $serverName, $connectionInfo);
