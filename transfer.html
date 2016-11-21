@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html lang="en">
+<head><title>转账界面</title></head>
+<form action="http://localhost/database/transfer.php" method="post">
+<br><br><br><br><br>
+<body>
+	<meta charset="utf-8">
+	<table border=0 align="center" >
+		<tr>
+		<td width="300px">请输入转账用户名</td>
+		<td width="300px"><input type="text" name="transfer_name" size="20"/></td>
+		</tr>
+
+		<tr>
+		<td width="300px">请输入转账金额</td>
+		<td width="300px"><input type="text" name="transfer_ammount"  onkeyup="value=value.replace(/[^\d]/g,'')"/></td>
+		</tr>
+	</table>
+	<p align="center">
+    <input type="submit" value="确认转账"/>
+    </p>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>
