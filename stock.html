@@ -4,9 +4,93 @@
 <head>
 	<meta charset="utf-8">
 	<title>股票页面</title>
+	<style type="text/css">
+	thstyle{width:200px; height:40px;}
+	</style>
 </head>
 
 <body>
-	This is a stock html
+	<h3 style="text-align:center"> This is a stock html</h3>
+    <a href="login.html"><input style="float:right" type="button" value="登出"></a>
+    <br><br>
+    <table align="center">
+	<tr><td width="300px"><h3 style="color:#CC00CC">用户名</td>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 
+	
+    <td width="300px"><h3 style="color:#CC00CC"/>账户余额</td>
+
+    <tr><td>echo</td><td>echo</td></tr>
+		 
+	
+
+    </table>
+    <br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br><br>
+
+    <table align="center" border="1" class="thstyle">
+    	<thead>
+    		<tr>
+    			<th width="100px">股票名称</th>
+    			<th width="100px">现有股份额数</th>
+    			<th width="100px">股票单价</th>
+    			<th width="100px">股票利润</th>
+    			<th></th>
+    			<th></th>
+    		</tr>
+    	</thead>
+    	<tbody>
+
+    		<tr>
+    			<td>股票1号</td>
+    			<td>0</td>
+    			<td>666</td>
+    			<td>2.3%</td>
+    			<td><a href="buy.html"><input type="submit" name="buy_1"  value="一键购买" /></a></td>
+    			<td><a href="buy.html"><input type="submit" name="sell_1" value="一键卖出" /></a></td>
+    		</tr>
+    		<br><br><br>
+    		<tr>
+    			<td>股票2号</td>
+    			<td>0</td>
+    			<td>1320</td>
+    			<td>1.3%</td>
+    		</tr>
+    		<br><br><br>
+    		<tr>
+    			<td>股票1号</td>
+    			<td>0</td>
+    			<td>400</td>
+    			<td>4.3%</td>
+    		</tr>
+
+
+    	</tbody>
+
+    </table>
+
+
+    <p>
+    <h4 style="text-align:center; bottom:0px "/>时间&nbsp;&nbsp;&nbsp;
+    <div id="名称" style="text-align:center"> 
+    <script language=Javascript> 
+    var now=new Date() ;
+    document.write(1900+now.getYear()+"-"+(now.getMonth()+1)+"-"+now.getDate()+" ") ;
+    </script> 
+    </div> </p>
+
+
+
+
+
+    
+
+
 </body>
 </html>
+
+
+
+
+
+
+
+
